@@ -1,5 +1,5 @@
 body {
-  background-color: var(--dark);
+  background-color: #222;
   transition: all 1s;
 }
 
@@ -13,14 +13,14 @@ body {
 
 .calculator {
   position: relative;
-  background: linear-gradient(13deg, var(--darkopac), var(--dark));
+  background: linear-gradient(13deg, #111, #222);
   backdrop-filter: blur(5px);
   width: 300px;
   min-height: 500px;
   border-radius: 24px;
   padding: 7px 5px;
-  box-shadow: 10px 5px 1px var(--darkopac);
-  border: var(--darkopac);
+  box-shadow: 10px 5px 1px #111;
+  border: #111;
 }
 
 .display {
@@ -28,7 +28,7 @@ body {
   margin-top: 20px;
   height: 150px;
   border-radius: 24px 24px 0 0;
-  color: var(--light);
+  color: #f0f0f0;
   padding: 15px;
 }
 .display .schema {
@@ -41,7 +41,7 @@ body {
   display: flex;
 }
 .display .schema .input .operator {
-  color: var(--blue);
+  color: #0b609d;
 }
 .display .schema .output {
   font-size: 2em;
@@ -53,7 +53,7 @@ input {
   outline: none;
   border: none;
   padding: 7px;
-  color: var(--light);
+  color: #f0f0f0;
 }
 input.output {
   border-top: transparent;
@@ -73,23 +73,23 @@ input.input {
   display: flex;
 }
 .keys div .key {
-  color: var(--blue);
+  color: #0b609d;
   font-size: 1.2em;
   font-weight: bolder;
   border-radius: 7px;
   width: 50px;
   height: 50px;
-  background-color: var(--dark);
+  background-color: #222;
   margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: inset 3px 2px 3px var(--lightopac);
+  box-shadow: inset 3px 2px 3px rgba(240, 240, 240, 0.5882352941);
 }
 .keys div .key.operator {
-  color: var(--light);
-  background-color: var(--blue);
+  color: #f0f0f0;
+  background-color: #0b609d;
 }
 .keys div .key.action {
   background-color: rgb(240, 155, 110);
@@ -97,20 +97,12 @@ input.input {
 }
 
 .theme {
-  background-color: var(--light);
+  background-color: #f0f0f0;
   border: none;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
-  color: var(--dark);
-}
-
-.light-theme {
-  --light: map-get($theme-map, light);
-  --dark: map-get($theme-map, dark);
-  --blue: map-get($theme-map, blue);
-  --lightopac: map-get($theme-map, lightopac);
-  --darkopac: map-get($theme-map, darkopac);
+  color: #222;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,113 @@
+// Styles de base
+body {
+    background-color: $dark;
+    transition: all 1s;
+  }
+  
+  .app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Composant Calculator
+  .calculator {
+    position: relative;
+    background: linear-gradient(13deg, $darkopac, $dark);
+    backdrop-filter: blur(5px);
+    width: 300px;
+    min-height: 500px;
+    border-radius: 24px;
+    padding: 7px 5px;
+    box-shadow: 10px 5px 1px $darkopac;
+    border: $darkopac;
+  }
+  
+  // Display de la calculatrice
+  .display {
+    width: 100%;
+    margin-top: 20px;
+    height: 150px;
+    border-radius: 24px 24px 0 0;
+    color: $light;
+    padding: 15px;
+    .schema {
+      margin-top: 50px;
+      width: 90%;
+      font-size: 1.2em;
+      font-weight: bolder;
+      .input {
+        display: flex;
+        .operator {
+          color: $blue;
+        }
+      }
+      .output {
+        font-size: 2em;
+      }
+    }
+  }
+  
+  // Input Styles
+  input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 7px;
+    color: $light;
+    &.output {
+      border-top: transparent;
+    }
+    &.input {
+      border-bottom: transparent;
+    }
+  }
+  
+  // Clavier de la calculatrice
+  .keys {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    div {
+      display: flex;
+      .key {
+        color: $blue;
+        font-size: 1.2em;
+        font-weight: bolder;
+        border-radius: 7px;
+        width: 50px;
+        height: 50px;
+        background-color: $dark;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: inset 3px 2px 3px $lightopac;
+        &.operator {
+          color: $light;
+          background-color: $blue;
+        }
+        &.action {
+          background-color: rgb(240, 155, 110);
+          color: #f0f0f0;
+        }
+      }
+    }
+  }
+  
+  // Bouton du thème
+  .theme {
+    background-color: $light;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: $dark;
+  }
+  
