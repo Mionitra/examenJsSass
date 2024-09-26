@@ -1,0 +1,116 @@
+body {
+  background-color: var(--dark);
+  transition: all 1s;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  position: relative;
+  background: linear-gradient(13deg, var(--darkopac), var(--dark));
+  backdrop-filter: blur(5px);
+  width: 300px;
+  min-height: 500px;
+  border-radius: 24px;
+  padding: 7px 5px;
+  box-shadow: 10px 5px 1px var(--darkopac);
+  border: var(--darkopac);
+}
+
+.display {
+  width: 100%;
+  margin-top: 20px;
+  height: 150px;
+  border-radius: 24px 24px 0 0;
+  color: var(--light);
+  padding: 15px;
+}
+.display .schema {
+  margin-top: 50px;
+  width: 90%;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+.display .schema .input {
+  display: flex;
+}
+.display .schema .input .operator {
+  color: var(--blue);
+}
+.display .schema .output {
+  font-size: 2em;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 7px;
+  color: var(--light);
+}
+input.output {
+  border-top: transparent;
+}
+input.input {
+  border-bottom: transparent;
+}
+
+.keys {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.keys div {
+  display: flex;
+}
+.keys div .key {
+  color: var(--blue);
+  font-size: 1.2em;
+  font-weight: bolder;
+  border-radius: 7px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--dark);
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 3px 2px 3px var(--lightopac);
+}
+.keys div .key.operator {
+  color: var(--light);
+  background-color: var(--blue);
+}
+.keys div .key.action {
+  background-color: rgb(240, 155, 110);
+  color: #f0f0f0;
+}
+
+.theme {
+  background-color: var(--light);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+.light-theme {
+  --light: map-get($theme-map, light);
+  --dark: map-get($theme-map, dark);
+  --blue: map-get($theme-map, blue);
+  --lightopac: map-get($theme-map, lightopac);
+  --darkopac: map-get($theme-map, darkopac);
+}
+
+/*# sourceMappingURL=style.css.map */
