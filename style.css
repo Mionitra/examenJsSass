@@ -12,7 +12,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+}
+body.light-mode {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0, #e0e0e0);
 }
 
 .calculator {
@@ -26,6 +28,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.calculator.light-mode {
+  background: rgba(0, 0, 0, 0.05);
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(200, 200, 200, 0.5);
 }
 
 .display {
@@ -42,6 +49,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+.display.light-mode {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
 .display input {
   background: none;
   border: none;
@@ -51,8 +62,14 @@ body {
   width: 100%;
   outline: none;
 }
+.display input.light-mode {
+  color: #000;
+}
 .display input::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+.display input::placeholder.light-mode::placeholder {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .keys {
@@ -87,6 +104,11 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
+.keys .key.light-mode {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 .keys .key:active {
   background-color: rgba(255, 255, 255, 0.5);
   transform: scale(0.95);
@@ -110,8 +132,7 @@ body {
 .keys .key[data-key="="]:hover {
   background-color: #218838;
 }
-
-.theme {
+.keys .theme {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -124,10 +145,10 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.theme:hover {
+.keys .theme:hover {
   background-color: #ced4da;
 }
-.theme:active {
+.keys .theme:active {
   background-color: #adb5bd;
 }
 
