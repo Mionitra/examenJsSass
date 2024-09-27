@@ -1,0 +1,177 @@
+/* Styles globaux pour la calculatrice */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #282a36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f8f8f2;
+  }
+  
+  /* Bouton pour changer de thème */
+  button.theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #50fa7b;
+    color: #282a36;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button.theme:hover {
+    background-color: #40e96d;
+  }
+  
+  button.theme:active {
+    transform: translateY(3px);
+  }
+  
+  /* Conteneur de l'application de la calculatrice */
+  .app {
+    width: 350px;
+    background-color: #44475a;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #50fa7b;
+  }
+  
+  /* Affichage de la calculatrice */
+  .calculator .display {
+    background-color: #6272a4;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    color: #f8f8f2;
+  }
+  
+  .calculator .input, .calculator .output {
+    background: none;
+    border: none;
+    color: #f8f8f2;
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 5px;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .calculator .input {
+    opacity: 0.7;
+    font-size: 1.5rem;
+  }
+  
+  .calculator .input:focus, .calculator .output:focus {
+    outline: none;
+  }
+  
+  /* Clavier de la calculatrice */
+  .calculator .keys div {
+    display: flex;
+    grid-gap: 15px;
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+
+  
+  .key {
+    background-color: #44475a;
+    color: #f8f8f2;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+  }
+  
+  .key:hover {
+    background-color: #6272a4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  .key:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Boutons spéciaux */
+  .key.action {
+    background-color: #ff5555;
+  }
+  
+  .key.action:hover {
+    background-color: #ff4444;
+  }
+  
+  .key.action:active {
+    background-color: #ff3333;
+  }
+  
+  /* Boutons des opérateurs */
+  .key.operator {
+    background-color: #bd93f9;
+  }
+  
+  .key.operator:hover {
+    background-color: #b77ff9;
+  }
+  
+  .key.operator:active {
+    background-color: #a56ff9;
+  }
+  
+  /* Bouton égal */
+  .key.operator[data-key="="] {
+    background-color: #50fa7b;
+    color: #282a36;
+  }
+  
+  .key.operator[data-key="="]:hover {
+    background-color: #40e96d;
+  }
+  
+  .key.operator[data-key="="]:active {
+    background-color: #36d95d;
+  }
+  
+  /* Responsivité */
+  @media (max-width: 400px) {
+    .app {
+      width: 100%;
+      margin: 0 15px;
+    }
+  
+    .key {
+      padding: 15px;
+      font-size: 1.3rem;
+    }
+  .calculator .input, .calculator .output {
+      font-size: 2rem;
+    }
+  }
+  
