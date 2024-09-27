@@ -1,0 +1,102 @@
+body {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+}
+body .theme {
+  background-color: #d4d1d1;
+  border: 1px solid #d4d1d1;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 10px;
+  color: black;
+}
+body .app {
+  background: #d4d1d1;
+  border-radius: 15px;
+  padding: 0px;
+  width: 410px;
+  height: auto;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+body .app .calculator {
+  flex-direction: column;
+  padding: 20px;
+}
+body .app .calculator .display {
+  background-color: rgb(45, 47, 45);
+  padding: 5px;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+body .app .calculator .display .input {
+  margin: 0;
+  padding: 10px;
+  width: 320px;
+  height: 40px;
+}
+body .app .calculator .display .output {
+  margin: 0;
+  padding: 10px;
+  width: 320px;
+  height: 40px;
+}
+body .app .calculator .keys {
+  background-color: #232222;
+  border-radius: 10px;
+  color: #000;
+  padding: 15px;
+}
+body .app .calculator .keys .tete {
+  display: flex;
+}
+body .app .calculator .keys .tete .action {
+  margin: 20px;
+  padding: 10px;
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+}
+body .app .calculator .keys .tete .action:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px 0 rgba(238, 73, 13, 0.8), 0 6px 20px 0 rgba(232, 49, 20, 0.7);
+}
+body .app .calculator .keys .tete .operator {
+  margin: 20px;
+  padding: 16px;
+  background-color: orangered;
+  border-radius: 10px;
+  color: white;
+}
+body .app .calculator .keys .tete .operator:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px 0 rgba(241, 111, 11, 0.8), 0 6px 20px 0 rgba(241, 122, 10, 0.7);
+}
+body .app .calculator .keys .tronc1 {
+  display: flex;
+}
+body .app .calculator .keys .tronc1 .key {
+  margin: 20px;
+  padding: 18px;
+  background-color: #1d0b93;
+  border-radius: 10px;
+  color: white;
+}
+body .app .calculator .keys .tronc1 .key:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px 0 rgba(25, 72, 242, 0.8), 0 6px 20px 0 rgba(58, 66, 210, 0.7);
+}
+body .app .calculator .keys .tronc1 .operator {
+  margin: 20px;
+  padding: 16px;
+  background-color: orangered;
+  border-radius: 10px;
+  color: white;
+}
+body .app .calculator .keys .tronc1 .operator:hover {
+  box-shadow: 0 4px 8px 0 rgba(247, 115, 14, 0.8), 0 6px 20px 0 rgba(223, 126, 22, 0.7);
+}
+
+/*# sourceMappingURL=style.css.map */
