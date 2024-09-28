@@ -19,22 +19,37 @@ document.querySelector('.theme').addEventListener('click', function () {
 });
 
 
-// Gestion des inputs du clavier
+
 let entree = document.querySelector('.input');
-input = "" // l'entree est initialise a vide
+let sortie = document.querySelector('.output'); 
+let input = ""; 
+
 keys.forEach(key => {
     const value = key.dataset.key;
     key.addEventListener('click', function() {
-        if (value == 'brackets') {
-            
-        if (input.split('(').length <= input.split(')').length) {
-            input += '(';
+        if (value == 'clear') {
+            input = "";
+            sortie.value = "0";
+        } else if (value == 'backspace') {
+            input = input.slice(0, -1); 
+        } else if (value == 'brackets') {
+            if (input.split('(').length <= input.split(')').length) {
+                input += '(';
+            } else {
+                input += ')';
+            }
+        } else if (value == '=') {
+            try {
+                
+                const result = eval(input);
+                sortie.value = result; 
+            } catch (e) {
+                sortie.value = "Erreur"; 
+            }
         } else {
-            input += ')';
+            input += value; 
         }
-        } else {
-            input += value;
-        }
-        entree.value = input;
+        entree.value = input; 
     });
 });
+
