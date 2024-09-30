@@ -1,6 +1,6 @@
 // Theme sombre et claire du bouton
 const keys = document.querySelectorAll('.key');
-document.querySelector('.theme').addEventListener('click', function () {
+document.querySelector('.btn-theme').addEventListener('click', function () {
     const body = document.body;
     const calculator = document.querySelector('.calculator');
     const display = document.querySelector('.display');
